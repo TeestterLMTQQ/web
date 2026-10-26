@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - CellPC Mobile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .m1 {
+            background-color: black;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .card-img-top,
+        .banner-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .cha img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fr-0 {
+            position: relative;
+        }
+
+        .fr-1 {
+            position: absolute;
+            top: 15px;
+            left: -15px;
+            height: 150px;
+            width: 200px;
+            z-index: 5;
+        }
+
+        .fr-1 img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .fr-2 {
+            position: absolute;
+            top: 120px;
+            left: 100px;
+            height: 250px;
+            width: 320px;
+            z-index: 1;
+        }
+
+        .fr-2 img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(13, 110, 253, 0.25);
+            border-color: #0d6efd;
+        }
+
+        .feature-card-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .feature-icon-wrapper {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #e7f1ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon-wrapper svg {
+            width: 28px;
+            height: 28px;
+            fill: #0d6efd;
+        }
+
+        .feature-text h5 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 6px;
+        }
+
+        .feature-text p {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .feature-arrow {
+            margin-top: 16px;
+            color: #0d6efd;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-arrow {
+            transform: translateX(5px);
+        }
+
+        .feature-bg-pattern {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 15px solid #f9f9f9;
+            pointer-events: none;
+            transition: border-color 0.35s ease;
+        }
+
+        .feature-card:hover .feature-bg-pattern {
+            border-color: rgba(13, 110, 253, 0.12);
+        }
+
+        .stat-card {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background-color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .brand-badge {
+            background-color: #f1f3f5;
+            color: #495057;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container p-0 position-sticky top-0 start-0">
+            <div class="top-header py-3">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <a href="#">
+                            <img src="image/1.jpg" alt="CellPC Mobile" class="logo">
+                        </a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <form class="d-flex justify-content-center">
+                            <input class="form-control me-2" type="text" placeholder="Tìm kiếm điện thoại, phụ kiện...">
+                            <button class="btn btn-primary" type="button">Tìm kiếm</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-end gap-2">
+                        <button class="btn btn-outline-primary" type="button">
+                            Đăng nhập
+                        </button>
+
+                        <button class="btn btn-primary" type="button">
+                            Đăng ký
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark m1">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="new3.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="new2.html">SẢN PHẨM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="new.html">TIN TỨC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LIÊN HỆ</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 fr-0" style="height: 400px;">
+                <div class="fr-1">
+                    <img src="image/daysac.jpg" alt="Phụ kiện điện thoại">
+                </div>
+                <div class="fr-2">
+                    <img src="image/cacc.jpg" alt="Điện thoại thông minh">
+                </div>
+            </div>
+            <div class="col-md-8 border border-primary p-4 d-flex flex-column rounded-3" style="height: 400px;">
+                <span class="badge bg-primary w-auto align-self-start mb-2">CHÚNG TÔI LÀ KIA</span>
+                <h2 class="fw-bold mb-3">Hệ thống bán lẻ & Sửa chữa công nghệ hàng đầu</h2>
+                <p class="text-muted mb-4">
+                    CellPC là đơn vị tiên phong trong việc cung cấp các thiết bị di động chính hãng, máy tính bảng và
+                    giải pháp kỹ thuật công nghệ toàn diện. Chúng tôi không chỉ mang lại các dòng smartphone mới nhất từ
+                    những thương hiệu quốc tế, mà còn cung cấp quy trình chẩn đoán, hỗ trợ kỹ thuật và bảo trì chuẩn hóa
+                    nhằm tối ưu hóa trải nghiệm số của khách hàng.
+                </p>
+                <div class="row g-2 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-1 text-primary">✔ Phân phối sản phẩm chính hãng 100%</p>
+                        <p class="mb-1 text-primary">✔ Mạng lưới khách hàng tin tưởng rộng khắp</p>
+                        <p class="mb-1 text-primary">✔ Quy trình xử lý kỹ thuật lấy ngay</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-1 text-primary">✔ Đội ngũ kỹ thuật viên chuyên môn cao</p>
+                        <p class="mb-1 text-primary">✔ Trang thiết bị chẩn đoán hiện đại</p>
+                        <p class="mb-1 text-primary">✔ Chính sách hậu mãi & Bảo hành uy tín</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-4.2-2.3l4.24-4.24-1.41-1.41-2.83 2.83-1.41-1.41-1.41 1.41L12.8 16.7z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h5>Cam kết chính hãng</h5>
+                            <p>Toàn bộ thiết bị và phụ kiện đều có nguồn gốc minh bạch, đầy đủ chứng nhận chất lượng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h5>Xử lý siêu tốc</h5>
+                            <p>Tối ưu hóa thời gian sửa chữa và bàn giao thiết bị trong khoảng thời gian ngắn nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1 C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h5>Tư vấn chuyên sâu 24/7</h5>
+                            <p>Hệ thống hỗ trợ trực tuyến liên tục, sẵn sàng đưa ra giải pháp phù hợp mọi nhu cầu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8C6.25 13.93 6 12.99 6 12c0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.45.87.7 1.81.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h5>Chương trình thu cũ đổi mới</h5>
+                            <p>Giải pháp nâng cấp thiết bị thông minh với định giá tối ưu và quy trình đơn giản.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h5>Bảo hành tiêu chuẩn</h5>
+                            <p>Chính sách bảo hành toàn diện, hỗ trợ đổi trả linh hoạt đối với các sự cố kỹ thuật.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h5>Giải pháp tài chính linh hoạt</h5>
+                            <p>Cung cấp chính sách thanh toán tối ưu, hỗ trợ trả góp lãi suất 0% cho người dùng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-12 text-center mb-4">
+                <h3 class="fw-bold">Chỉ số phát triển hệ thống</h3>
+                <p class="text-muted">Các con số phản ánh quy mô hoạt động và sự tin tưởng của người dùng đối với CellPC
+                </p>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-card">
+                    <h2 class="fw-bold text-primary mb-1">50.000+</h2>
+                    <p class="text-muted mb-0 fs-7">Thiết bị bán ra</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-card">
+                    <h2 class="fw-bold text-primary mb-1">12.000+</h2>
+                    <p class="text-muted mb-0 fs-7">Lượt sửa chữa thành công</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-card">
+                    <h2 class="fw-bold text-primary mb-1">99.2%</h2>
+                    <p class="text-muted mb-0 fs-7">Mức độ hài lòng</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-card">
+                    <h2 class="fw-bold text-primary mb-1">24/7</h2>
+                    <p class="text-muted mb-0 fs-7">Hỗ trợ kỹ thuật</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5 align-items-center bg-light p-4 rounded-3 border">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h4 class="fw-bold mb-2">Thương hiệu đối tác</h4>
+                <p class="text-muted mb-0">Hợp tác phân phối chính hãng với các tập đoàn công nghệ hàng đầu toàn cầu.
+                </p>
+            </div>
+            <div class="col-md-8 d-flex flex-wrap gap-2 justify-content-md-end">
+                <span class="brand-badge">Apple</span>
+                <span class="brand-badge">Samsung</span>
+                <span class="brand-badge">Xiaomi</span>
+                <span class="brand-badge">OPPO</span>
+                <span class="brand-badge">Vivo</span>
+                <span class="brand-badge">Realme</span>
+                <span class="brand-badge">Asus</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <footer class="bg-dark text-light px-4 py-5 mt-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4 mb-3">
+                        <h5 class="fw-bold mb-3 text-primary">CellPC Mobile</h5>
+                        <p class="text-secondary mb-2">Hệ thống bán lẻ điện thoại di động, phụ kiện chính hãng và trung
+                            tâm sửa chữa công nghệ chất lượng cao.</p>
+                        <p class="text-secondary mb-1">Địa chỉ: 718bis Đ. Kinh Dương Vương, Phú Lâm, TP.HCM</p>
+                        <p class="text-secondary mb-1">Hotline: 1900 6868</p>
+                        <p class="text-secondary mb-1">Email: cellpc.support@gmail.com</p>
+                        <p class="text-secondary mb-0">Giờ mở cửa: 08:00 - 21:00 (Hằng ngày)</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h5 class="fw-bold mb-3 text-primary">Chính sách & Dịch vụ</h5>
+                        <ul class="list-unstyled text-secondary">
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Chính sách bảo hành
+                                    sản phẩm</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Chính sách đổi trả
+                                    & Hoàn tiền</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Hướng dẫn mua hàng
+                                    trả góp</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Dịch vụ sửa chữa &
+                                    Thay thế linh kiện</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Quy trình thu cũ
+                                    đổi mới</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h5 class="fw-bold mb-3 text-primary">Vị trí cửa hàng</h5>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15679.819867549013!2d106.64092014999999!3d10.7379543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c2ab06fc7b7%3A0x50a4eefae0a2deca!2zR2FsYXh5IENpbmVtYSBLaW5oIETGsMahbmcgVsawxqFuZw!5e0!3m2!1svi!2s!4v1789955125074!5m2!1svi!2s"
+                            width="100%" height="160" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+                <hr class="border-secondary my-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start text-secondary">
+                        <small>&copy; 2026 CellPC Mobile. Tất cả các quyền được bảo lưu.</small>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-secondary mt-2 mt-md-0">
+                        <small>Thiết kế hệ thống bởi CellPC Team</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
